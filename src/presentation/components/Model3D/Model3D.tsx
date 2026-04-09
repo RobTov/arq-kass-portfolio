@@ -7,7 +7,7 @@ useGLTF.preload('/3dmodels/Casamoderna.glb');
 
 function Model() {
   const { scene } = useGLTF('/3dmodels/Casamoderna.glb');
-  return <primitive object={scene} scale={.6} />;
+  return <primitive object={scene} scale={0.5} />;
 }
 
 function Loader() {

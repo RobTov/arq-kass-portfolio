@@ -1,4 +1,5 @@
 import { Model3D } from '../Model3D/Model3D';
+import { Footer } from '../Footer/Footer';
 import styles from './Hero.module.css';
 
 export function Hero() {
@@ -19,6 +20,7 @@ export function Hero() {
           </svg>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

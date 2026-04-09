@@ -10,7 +10,8 @@
 
 .modelContainer {
   flex: 1;
-  min-height: 50%;
+  min-height: 45%;
+  max-height: 55%;
   width: 100%;
   animation: fadeIn 1s ease-out 0.3s both;
 }
@@ -109,11 +110,16 @@
   .slogan {
     font-size: clamp(0.8rem, 2vw, 1rem);
   }
+  
+  .scrollIndicator {
+    bottom: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
   .modelContainer {
-    min-height: 45%;
+    min-height: 40%;
+    max-height: 50%;
   }
   
   .textContainer {
@@ -121,6 +127,6 @@
   }
   
   .scrollIndicator {
-    bottom: 0.5rem;
+    bottom: 3.5rem;
   }
 }

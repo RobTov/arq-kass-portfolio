@@ -1,5 +1,6 @@
 import { contactInfo } from '../../../infrastructure/data/projects';
 import { FaWhatsapp, FaInstagram, FaFacebookSquare, FaEnvelope } from 'react-icons/fa';
+import { Footer } from '../Footer/Footer';
 import styles from './Contact.module.css';
 
 export function Contact() {
@@ -29,11 +30,8 @@ export function Contact() {
             <FaFacebookSquare />
           </a>
         </div>
-        
-        <footer className={styles.footer}>
-          <p>© 2026 Arq. Kassandra Romanillo</p>
-        </footer>
       </div>
+      <Footer />
     </section>
   );
 }

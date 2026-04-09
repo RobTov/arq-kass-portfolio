@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { ProjectDetail } from '../ProjectDetail/ProjectDetail';
+import { Footer } from '../Footer/Footer';
 import { designProjects } from '../../../infrastructure/data/projects';
 import { Project } from '../../../domain/entities/Project';
 import styles from './Design.module.css';
@@ -10,21 +11,23 @@ export function Design() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Diseño</h2>
-        <p className={styles.subtitle}>Espacios que inspiran</p>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Diseño</h2>
+          <p className={styles.subtitle}>Espacios que inspiran</p>
+        </div>
+        
+        <div className={styles.grid}>
+          {designProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={() => setSelectedProject(project)}
+            />
+          ))}
+        </div>
       </div>
-      
-      <div className={styles.grid}>
-        {designProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onClick={() => setSelectedProject(project)}
-          />
-        ))}
-      </div>
-
+      <Footer />
       {selectedProject && (
         <ProjectDetail
           project={selectedProject}

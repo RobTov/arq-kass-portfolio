@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  position: relative;
 }
 
 .container {
@@ -75,12 +76,6 @@
 .socialLink:hover {
   color: var(--color-accent);
   transform: scale(1.1);
-}
-
-.footer {
-  font-size: 0.75rem;
-  color: var(--color-text-secondary);
-  letter-spacing: 0.1em;
 }
 
 @media (max-width: 640px) {
